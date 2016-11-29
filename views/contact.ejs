@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/css/contact.css" rel="stylesheet">
+</head>
+<body>
+<%if(messageSent){%>
+<p>Message Sent</p>
+<%}%>
+<h1>Contact Me!</h1>
+<form action="/" method="POST">
+    <input type="email" name="email" placeholder="Enter Email to send it to">
+    <input type="text" name="subject" placeholder="Subject">
+    <textarea name="content" rows="10" cols="80"></textarea>
+    <input type="submit">
+</form>
+</body>
+</html>
