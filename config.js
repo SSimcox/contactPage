@@ -8,8 +8,8 @@ var refreshToken = '1/1_SlW7pAwlWfwPTIVwJYB7gzsEmmzw-E4L9eaoU4VR0';
 
 
 module.exports = {
-    mailUser: 'steven.d.simcox@gmail.com',
-    mailPass: 'Espthtbl4227',
+    mailUser: '',//enter gmail email,
+    mailPass: '',//enter gmail password,
     clientId: clientId,
     clientSecret: clientSecret,
     refreshToken: refreshToken
