@@ -2,18 +2,18 @@
  * Created by Steven on 11/28/2016.
  */
 var express = require('express');
-var app = require('express')();
+var app = express();
 var nodemailer = require('nodemailer');
 var bodyParser = require('body-parser');
 var engine = require('ejs-mate');
 var ejs = require('ejs');
 var config = require('./config');
 
+app.engine('ejs', engine);
 app.set('view engine', 'ejs');
 app.set('/views', __dirname + "/views");
 app.use('/css', express.static('css'));
 app.use(bodyParser.urlencoded({extended: false}));
-app.engine('ejs', engine);
 
 var smtpTransport = nodemailer.createTransport("SMTP",{
     service:"Gmail",
@@ -50,12 +50,6 @@ app.post('/', function(req,res,next){
         });
     });
 });
-
-app.get('/oauth2return',function(req,res,next){
-
-});
-
-
 
 app.listen(3000,function(){
    console.log("Listening on port 3000");
